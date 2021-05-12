@@ -86,9 +86,12 @@ struct ContentView: View {
                                
                             Image("apple")
                                 .resizable()
-                            .frame(width: 70, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                   
-                                   
+                                .frame(width: 60, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .padding(.bottom,5)
+                                .padding(.top,5)
+                                .padding(.leading,5)
+                                .padding(.trailing,5)
+                                
                                    .overlay(
                                        RoundedRectangle(cornerRadius: 35)
                                            .stroke(Color.black, lineWidth: 2)
@@ -102,7 +105,13 @@ struct ContentView: View {
                                
                             Image("Google")
                                 .resizable()
-                            .frame(width: 70, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .frame(width: 60, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .padding(.bottom,5)
+                                .padding(.top,5)
+                                .padding(.leading,5)
+                                .padding(.trailing,5)
+                                
+                                
                                    
                                    
                                    .overlay(

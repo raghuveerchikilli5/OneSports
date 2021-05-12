@@ -29,7 +29,7 @@ struct login: View {
                     .padding(.top, 0)
                     .font(.system(size: 12))
                 
-                TextField("   Your Mail", text: $mail)
+                TextField("Your Mail", text: $mail)
                 .frame(width: 300, height: 50, alignment: .center)
                     
                     .overlay(
@@ -120,13 +120,6 @@ struct login: View {
     }
    
     func primaryAPI(){
-       
-//        let param : Parameters  = [
-//              "userName":"9133117471",
-//              "password":"Sree@123"
-//
-//                               ]
-//
         let param : Parameters  = [
 
             "userName":mail,
@@ -136,7 +129,7 @@ struct login: View {
        
        let url1 = "https://beta.sreenidhi1sports.com/api/AppUsers/loginWithPassword"
 //
-         print(param)
+     
     
         AF.request(url1, method: .post, parameters:param ,encoding: JSONEncoding.default, headers: nil).validate().responseJSON { [self]
                   response in
@@ -145,7 +138,7 @@ struct login: View {
                   case .success(let value):
                       do {
                         var data = value as? [String:Any]
-                        print(data)
+                     
                        
                         if let token =  data!["token"] as? String {
                             self.tokenMain = token
@@ -176,11 +169,13 @@ struct login: View {
                       case .success(let value):
                           do {
                         
-                            login1 = true
+                            
                            
                             
-                            var data = value as? [String:Any]
-                            print(data)
+                            if  let loginData = value as? [String:Any] {
+                                login1 = true
+                                print(loginData)
+                            }
                           }
                           break
                       case .failure(let error):
