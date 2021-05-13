@@ -43,22 +43,20 @@ struct ContentView: View {
                                               
                                               
                     }.padding(.bottom,1)
-                                          
                     
-                    Button(action: {
-                           print("sign up bin tapped")
-                       }) {
-                           Text("Create an Account")
-                            .frame(width: 300, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                               .font(.system(size: 18))
-                            .padding()
-                               .foregroundColor(.red)
-                               .overlay(
-                                   RoundedRectangle(cornerRadius: 35)
-                                       .stroke(Color.red, lineWidth: 2)
-                           )
-                    }.padding(.top,-10)
+                    NavigationLink(destination: SignUpView()) {
+                                Text("Create an Account")
+                                .frame(width: 300, height: 30, alignment: .center)
+                                .padding()
+                               .foregroundColor(.white)
+                            .background(Color.red)
+                                .cornerRadius(35)
+                                                                
+                                                                
+                                      }.padding(.top,-10)
+                                         
                     
+                  
                     Text("Or login with")
                         .frame(width: 300, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(.center)

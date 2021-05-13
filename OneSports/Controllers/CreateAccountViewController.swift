@@ -11,6 +11,7 @@ class CreateAccountViewController: UIViewController {
 
   
 
+    
   
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var genderTF: UITextField!
@@ -28,9 +29,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+    
         userNameTF.cornerRadius()
         genderTF.cornerRadius()
         emailTF.cornerRadius()
@@ -42,16 +41,9 @@ class CreateAccountViewController: UIViewController {
         schoolNameTF.cornerRadius()
         passwordTf.cornerRadius()
         comfirmPasswordTf.cornerRadius()
-       
-        
-        
+
         // Do any additional setup after loading the view.
     }
-    
-   
-    
-    
-    
 
 }
 
