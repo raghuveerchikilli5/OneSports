@@ -72,7 +72,7 @@ struct login: View {
                          }
                          
                          NavigationLink(destination: login()) {
-                             Text("forgot Your Passowrd?")
+                             Text("Forgot Your Passowrd?")
                                  .frame(width: 270, height: 20, alignment: .center)
                                  .padding(.top,0)
                                  

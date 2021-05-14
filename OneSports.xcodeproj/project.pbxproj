@@ -130,11 +130,11 @@
 		1812BF6426410FFC00F8CF49 /* OneSports */ = {
 			isa = PBXGroup;
 			children = (
+				18A13683264EBEFD004A59B6 /* Assets */,
+				18A13682264EBEF4004A59B6 /* AppDelegates */,
+				18A1367F264EBEB4004A59B6 /* Model */,
 				1812BF9C264113B600F8CF49 /* Controllers */,
 				1812BF9B2641139C00F8CF49 /* SwiftUI */,
-				1812BF6526410FFC00F8CF49 /* AppDelegate.swift */,
-				1812BF6726410FFC00F8CF49 /* SceneDelegate.swift */,
-				1812BF6E26410FFD00F8CF49 /* Assets.xcassets */,
 				1812BF7326410FFD00F8CF49 /* LaunchScreen.storyboard */,
 				1812BF7626410FFD00F8CF49 /* Info.plist */,
 				1812BF6B26410FFC00F8CF49 /* OneSports.xcdatamodeld */,
@@ -146,7 +146,6 @@
 		1812BF7026410FFD00F8CF49 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				1812BF7126410FFD00F8CF49 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -188,6 +187,31 @@
 				1812BF9F264113E400F8CF49 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18A1367F264EBEB4004A59B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A13682264EBEF4004A59B6 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				1812BF6526410FFC00F8CF49 /* AppDelegate.swift */,
+				1812BF6726410FFC00F8CF49 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		18A13683264EBEFD004A59B6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1812BF7126410FFD00F8CF49 /* Preview Assets.xcassets */,
+				1812BF6E26410FFD00F8CF49 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		97C6E219EE3C9B3DAB3CB2EF /* Pods */ = {
