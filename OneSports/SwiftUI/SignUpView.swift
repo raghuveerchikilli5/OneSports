@@ -11,24 +11,56 @@ import Alamofire
 struct SignUpView: View {
     
     //  Declaring  Variables
-    
     @State var mail: String = ""
-    @State  var loginT:Bool = false
-    @State  var expand:Bool = false
-    @State  var expand1:Bool = false
-    @State  var expand2:Bool = false
-               @State var login1:Bool = false
-               @State var tokenMain = ""
-    @State var name = ""
-    @State var mobileNumber = ""
-    @State var email = ""
-    @State var gender = ""
-    @State var password = ""
-    @State var qualifications = ""
-    @State var dateofbirth = ""
-    @State var bloodgroup = ""
-    @State var dominantside = ""
-    @State var schoolName = ""
+        @State  var loginT:Bool = false
+        @State  var expand:Bool = false
+        @State  var expand1:Bool = false
+        @State  var expand2:Bool = false
+        @State  var Genders = [String]()
+        @State  var labels = [String]()
+        @State  var labels2 = [String]()
+        @State  var values = [Int]()
+        @State  var values1 = [Int]()
+        
+        @State  var value1Main = 0
+        
+        @State  var labels3 = [String]()
+        @State  var labels4 = [String]()
+        @State  var values2 = [Int]()
+        @State  var values22 = [Int]()
+        
+        @State  var value2Main = 0
+        
+        @State  var labels5 = [String]()
+        @State  var labels6 = [String]()
+        @State  var values3 = [Int]()
+        @State  var values33 = [Int]()
+        
+        @State  var value3Main = 0
+        
+        @State  var genderVal = ""
+        @State  var bloodVal = ""
+        @State  var dominatVal = ""
+        
+        
+        
+        
+        
+                   @State var login1:Bool = false
+                   @State var tokenMain = ""
+        @State var name = ""
+        @State var selected = "Gender"
+        @State var selected2 = "BloodGroup"
+        @State var selected3 = "DominantSide"
+        @State var mobileNumber = ""
+        @State var email = ""
+        @State var gender = ""
+        @State var password = ""
+        @State var qualifications = ""
+        @State var dateofbirth = ""
+        @State var bloodgroup = ""
+        @State var dominantside = ""
+        @State var schoolName = ""
     var body: some View {
         
         NavigationView {
@@ -59,7 +91,7 @@ struct SignUpView: View {
                           .font(.system(size: 12))
                       
                       TextField("   Name", text: $name)
-                      .frame(width: 330, height: 55, alignment: .center)
+                      .frame(width: 330, height: 60, alignment: .center)
                           .overlay(
                               RoundedRectangle(cornerRadius: 35)
                                   .stroke(Color.gray, lineWidth: 2)
@@ -69,7 +101,7 @@ struct SignUpView: View {
                           .padding(.top,20)
                       
                     TextField("  Mobile Number", text: $mobileNumber)
-                                         .frame(width: 330, height: 55, alignment: .center)
+                                         .frame(width: 330, height: 60, alignment: .center)
                                              
                                              .overlay(
                                                  RoundedRectangle(cornerRadius: 35)
@@ -77,7 +109,7 @@ struct SignUpView: View {
                                              )
                                              .padding(.top,20)
                         TextField("  email", text: $email)
-                                                               .frame(width: 330, height: 55, alignment: .center)
+                                                               .frame(width: 330, height: 60, alignment: .center)
                                                                    
                                                                    .overlay(
                                                                        RoundedRectangle(cornerRadius: 35)
@@ -86,72 +118,56 @@ struct SignUpView: View {
                                                                    .padding(.top,20)
                         
                         
-                                         
-                    TextField("   Gender", text: $gender)
-                                         .frame(width: 330, height: 55, alignment: .center)
-                                             
-                                             .overlay(
-                                                 RoundedRectangle(cornerRadius: 35)
-                                                     .stroke(Color.gray, lineWidth: 2)
-                                             )
-                                             .padding(.top,20)
-                   
                         VStack{
-                        Button(action: {
-                                  dropDown()
-                            print("SwiftUI: Button tapped")
-                            self.expand.toggle()
-                                            
-                                             
-                                       })
-                                       {
-                                               Text("Sign Up")
-                                               .frame(width: 330, height: 30, alignment: .center)
-                                               .padding()
-                                               .foregroundColor(.clear)
-                                               .background(Color.clear)
-                                               .cornerRadius(35)
-                                                .font(.system(size:35))
-                                                                       
-                                              .font(Font.headline.weight(.bold))
-                                           
-                                       }
-                                        .padding(.top,-73)
-                        
-                        if expand {
-                            VStack{
-                            Text("Male").onTapGesture{
-                                self.expand.toggle()
-                                gender = "Male"
+                                   DisclosureGroup(selected,isExpanded:$expand) {
                                 
+                                VStack {
+                                    ForEach(Array(labels2.enumerated()), id: \.1) { index, element in
+                                       
+                                        Text("\(element)")
+                                            .font(.title3)
+                                            .padding(.all)
+                                            .onTapGesture {
+                                                selected = element
+                                                
+                                                value1Main = values1[index]
+                                                
+                                                print(value1Main)
+                                                self.expand.toggle()
+                                            }
+                                    }
+                                    
+                                    
+                                    
+                                }
                             }
-                                .foregroundColor(Color.black)
-                                .multilineTextAlignment(.leading)
-                                .padding(.top, -10)
-                              .font(.system(size:25))
-                                .frame(width: 330, height: 10, alignment: .topLeading)
-                              .font(Font.headline.weight(.bold))
-                                .padding(.bottom,5)
-                            .padding(.leading,10)
-                            Text("Female").onTapGesture{
-                                self.expand.toggle()
-                                gender = "Female"
-                            }
-                                .foregroundColor(Color.black)
-                                .multilineTextAlignment(.leading)
-                                .padding(.top, 0)
-                              .font(.system(size:25))
-                                .frame(width: 330, height: 10, alignment: .topLeading)
-                              .font(Font.headline.weight(.bold))
-                            }.padding(.top,0)
-                            .padding(.bottom,10)
-                            .padding(.leading,12)
-                        }
-                        
-                        
-                        }.padding(.bottom,0)
+                                   
+                                   .accentColor(.black)
+                                   .padding(.all)
+    
+                                   .font(.system(size:18))
+                            .foregroundColor(Color.black)
+                            .foregroundColor(.white)
+                                  
+                            .background(Color.clear)
+                            .font(.title2)
+                            .cornerRadius(8)
+                         
+                                  
+                                          .overlay(
+                                              RoundedRectangle(cornerRadius: 35)
+                                                  .stroke(Color.gray, lineWidth: 2)
+                                          )
+                                   .frame(width:330)
+                                   
+                            Spacer()
+                            
+                            
+                            
+                     }.padding(.top,10)
+                   
                     TextField("   Password", text: $password)
-                               .frame(width: 330, height: 55, alignment: .center)
+                               .frame(width: 330, height: 60, alignment: .center)
                                    
                                    .overlay(
                                        RoundedRectangle(cornerRadius: 35)
@@ -160,7 +176,7 @@ struct SignUpView: View {
                                    .padding(.top,10)
                         
                                TextField("    qualifications", text: $qualifications)
-                               .frame(width: 330, height: 55, alignment: .center)
+                               .frame(width: 330, height: 60, alignment: .center)
                                    
                                    .overlay(
                                        RoundedRectangle(cornerRadius: 35)
@@ -173,8 +189,8 @@ struct SignUpView: View {
                  
                         VStack {
                             
-                            TextField("   dateofbirth", text: $dateofbirth)
-                                                 .frame(width: 330, height: 55, alignment: .center)
+                            TextField("   DateofBirth", text: $dateofbirth)
+                                                 .frame(width: 330, height: 60, alignment: .center)
                                                      
                                                      .overlay(
                                                          RoundedRectangle(cornerRadius: 35)
@@ -182,135 +198,91 @@ struct SignUpView: View {
                                                      )
                                                      .padding(.top,20)
                             
-                            
-                            
-                                           TextField("   bloodgroup", text: $bloodgroup)
-                                                                                                             .frame(width: 330, height: 55, alignment: .center)
-                                                                                                                 
-                                                                                                                 .overlay(
-                                                                                                                     RoundedRectangle(cornerRadius: 35)
-                                                                                                                         .stroke(Color.gray, lineWidth: 2)
-                                                                                                                 )
-                                                                                                                 .padding(.top,20)
-                            
-                            VStack{
-                            Button(action: {
-                                            print("SwiftUI: Button tapped")
-                                self.expand1.toggle()
-                                                
-                                                 
-                                           })
-                                           {
-                                                   Text("Sign Up")
-                                                   .frame(width: 330, height: 30, alignment: .center)
-                                                   .padding()
-                                                   .foregroundColor(.clear)
-                                                   .background(Color.clear)
-                                                   .cornerRadius(35)
-                                                    .font(.system(size:35))
-                                                                           
-                                                  .font(Font.headline.weight(.bold))
-                                               
-                                           }
-                                            .padding(.top,-73)
-                            
-                            if expand1 {
-                                VStack{
-                                Text("Male").onTapGesture{
-                                    self.expand1.toggle()
-                                    gender = "Male"
-                                    
-                                }
-                                    .foregroundColor(Color.black)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.top, -10)
-                                  .font(.system(size:20))
-                                    .frame(width: 330, height: 10, alignment: .topLeading)
-                                  .font(Font.headline.weight(.bold))
-                                    .padding(.bottom,5)
-                                .padding(.leading,10)
-                                Text("Female").onTapGesture{
-                                    self.expand1.toggle()
-                                    gender = "Female"
-                                }
-                                    .foregroundColor(Color.black)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.top, 0)
-                                  .font(.system(size:20))
-                                    .frame(width: 330, height: 10, alignment: .topLeading)
-                                  .font(Font.headline.weight(.bold))
-                                }.padding(.top,0)
-                                .padding(.bottom,10)
-                                .padding(.leading,12)
-                            }
-                            
-                            
-                            }.padding(.bottom,0)
-                            
-                            
-                            TextField("   dominantside", text: $dominantside)
-                                                                                              .frame(width: 330, height: 55, alignment: .center)
-                                                                                                  
-                                                                                                  .overlay(
-                                                                                                      RoundedRectangle(cornerRadius: 35)
-                                                                                                          .stroke(Color.gray, lineWidth: 2)
-                                                                                                  )
-                                                                                                  .padding(.top,20)
-                            
-                            VStack{
-                            Button(action: {
-                                            print("SwiftUI: Button tapped")
-                                self.expand2.toggle()
-                                                
-                                                 
-                                           })
-                                           {
-                                                   Text("Sign Up")
-                                                   .frame(width: 330, height: 30, alignment: .center)
-                                                   .padding()
-                                                   .foregroundColor(.clear)
-                                                   .background(Color.clear)
-                                                   .cornerRadius(35)
-                                                    .font(.system(size:35))
-                                                                           
-                                                  .font(Font.headline.weight(.bold))
-                                               
-                                           }
-                                            .padding(.top,-73)
-                            
-                            if expand2 {
-                                VStack{
-                                Text("Male").onTapGesture{
-                                    self.expand2.toggle()
-                                    gender = "Male"
-                                    
-                                }
-                                    .foregroundColor(Color.black)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.top, -10)
-                                  .font(.system(size:25))
-                                    .frame(width: 330, height: 10, alignment: .topLeading)
-                                  .font(Font.headline.weight(.bold))
-                                    .padding(.bottom,5)
-                                .padding(.leading,10)
-                                Text("Female").onTapGesture{
-                                    self.expand2.toggle()
-                                    gender = "Female"
-                                }
-                                    .foregroundColor(Color.black)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.top, 0)
-                                  .font(.system(size:25))
-                                    .frame(width: 330, height: 10, alignment: .topLeading)
-                                  .font(Font.headline.weight(.bold))
-                                }.padding(.top,0)
-                                .padding(.bottom,10)
-                                .padding(.leading,12)
+                                                   VStack  {
+                                                                DisclosureGroup(selected2,isExpanded:$expand1) {
+                                                             
+                                                             VStack {
+                                                                ForEach(Array(labels4.enumerated()), id: \.1) { index, element in
+                                                                    
+                                                                     Text("\(element)")
+                                                                         .font(.title3)
+                                                                         .padding(.all)
+                                                                         .onTapGesture {
+                                                                             value2Main = values22[index]
+                                                                             self.expand1.toggle()
+                                                                         }
+                                                                 }
+                                                                 
+                                                                 
+                                                                 
+                                                             }
+                                                         }
+                                                                
+                                                                .accentColor(.black)
+                                                                .padding(.all)
+                                 
+                                                                .font(.system(size:18))
+                                                         .foregroundColor(Color.black)
+                                                         .foregroundColor(.white)
+                                                               
+                                                         .background(Color.clear)
+                                                         .font(.title2)
+                                                         .cornerRadius(8)
+                                                      
+                                                               
+                                                                       .overlay(
+                                                                           RoundedRectangle(cornerRadius: 35)
+                                                                               .stroke(Color.gray, lineWidth: 2)
+                                                                       )
+                                                                .frame(width:330)
+                                                                
+                                                         Spacer()
+                                                         
+                                                         
+                                                         
+                                                   }.padding(.top,20)
+                            VStack  {
+                                     DisclosureGroup(selected3,isExpanded:$expand2) {
+                                      VStack {
+                                        ForEach(Array(labels6.enumerated()), id: \.1) { index, element in
+                                             
+                                              Text("\(element)")
+                                                  .font(.title3)
+                                                  .padding(.all)
+                                                  .onTapGesture {
+                                                    value3Main = values33[index]
+                                                      self.expand2.toggle()
+                                                  }
+                                          }
+                                          
+                                      }
+                                  }
+                                         
+                                         .accentColor(.black)
+                                         .padding(.all)
+          
+                                         .font(.system(size:18))
+                                  .foregroundColor(Color.black)
+                                  .foregroundColor(.white)
+                                        
+                                  .background(Color.clear)
+                                  .font(.title2)
+                                  .cornerRadius(8)
                                
-                            }
+                                        
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 35)
+                                                        .stroke(Color.gray, lineWidth: 2)
+                                                )
+                                         .frame(width:330)
+                                         
+                                  Spacer()
+                                  
+                                  
+                                  
+                            }.padding(.top,20)
                             
-                            
-                            }.padding(.bottom,0)
+                       
                             
                             TextField("    schoolName", text: $schoolName)
                                                  .frame(width: 330, height: 55, alignment: .center)
@@ -385,6 +357,11 @@ struct SignUpView: View {
           .navigationBarHidden(true)
                   .frame(maxWidth: .infinity)
                                    .padding(.top,0)
+                  .onAppear {
+                          print("ContentView appeared!")
+                        dropDown()
+                      }
+                
           }
                
            
@@ -449,47 +426,138 @@ struct SignUpView: View {
      }
   
     func dropDown(){
-           let headers:HTTPHeaders = [
-       "Content-Type": "application/x-www-form-urlencoded",
-       "Accept": "application/json",
-       "version":"1.0.0",
-        "source":"app"
-        ]
-      
-        
-        
-      let url2 = "https://staging.sreenidhi1sports.com/api/Options"
+        let headers:HTTPHeaders = [
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json",
+    "version":"1.0.0",
+     "source":"app"
+     ]
+   
+    
+     labels3 = [String]()
+     values2 = [Int]()
+     
+   let url2 = "https://staging.sreenidhi1sports.com/api/Options"
 
-       AF.request(url2, method: .get, parameters:nil ,encoding: URLEncoding(), headers: headers).validate().responseJSON { [self]
-                 response in
-               
-                 switch response.result {
-                 case .success(let value):
-                     do {
-                       DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                           login1 = true
-                                             
-                                         }
-                                         
-                       
-                        var data = value as? [[String:Any]]
-                       print(data)
+    AF.request(url2, method: .get, parameters:nil ,encoding: URLEncoding(), headers: headers).validate().responseJSON { [self]
+              response in
+            
+              switch response.result {
+              case .success(let value):
+                  do {
+                  
+                    
+                     if  let data = value as? [[String:Any]] {
+                    
+                         for i in data {
+                             if let identifier = i["identifier"] as? String {
+                         
+                                 if identifier == "GENDER" {
+                             
+                             if let label = i["label"] as? String {
+                                 labels.append(label)
+                                 }
+                                     if let value = i["value"] as? Int {
+                                     values.append(value)
+                                                                                                       
+                                     }
+                                     
+                                
+                                     
+                             }
+                                 if identifier == "BLOODGROUP" {
+                             
+                             if let label = i["label"] as? String {
+                                 labels3.append(label)
+                                 }
+                                     if let value = i["value"] as? Int {
+                                     values2.append(value)
+                                                                                                       
+                                     }
+                                     
+                                
+                                     
+                             }
+                                 if identifier == "DOMINANTSIDE" {
+                             
+                             if let label = i["label"] as? String {
+                                 labels5.append(label)
+                                 }
+                                     if let value = i["value"] as? Int {
+                                     values3.append(value)
+                                                                                                       
+                                     }
+                                     
+                                
+                                     
+                             }
+                                 
+                               print(values)
+                              print(values2)
+                                 print(values3)
+                                 
+                                let rr = labels.removeDuplicates()
+                                labels2 = rr
+                                 
+                                 let v1 = values.removeDuplicates()
+                                 values1 = v1
+                                 
+                                 let v2 = values2.removeDuplicates()
+                                 values22 = v2
+                                 
+                                 let v3 = values3.removeDuplicates()
+                                 values33 = v3
+                                 
+                                 
+                                 let rr2 = labels3.removeDuplicates()
+                                 labels4 = rr2
+                                 
+                                 let rr3 = labels5.removeDuplicates()
+                                 labels6 = rr3
+                                 
+                                 
+                                 
+                             }
+                           
+                          
+                             
+                         }
+                         
+                         
+                         
                      }
-                     break
-                 case .failure(let error):
-                        
-                     print("failed response ",error)
-     //                print("sendLatLong Err", error.localizedDescription)
-                                   
-                 }
-             }
-         
-             
-           }
+                     
+                     
+                     
+                  }
+                  break
+              case .failure(let error):
+                     
+                  print("failed response ",error)
+  //                print("sendLatLong Err", error.localizedDescription)
+                                
+              }
+          }
+      
+          
+        }
     
 }
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
+    }
+}
+extension Array where Element:Equatable {
+    func removeDuplicates() -> [Element] {
+        var result = [Element]()
+
+        for value in self {
+            if result.contains(value) == false {
+                result.append(value)
+            }
+        }
+
+        return result
     }
 }

@@ -71,7 +71,7 @@ struct login: View {
                              
                          }
                          
-                         NavigationLink(destination: login()) {
+                         NavigationLink(destination: ForgotUI()) {
                              Text("Forgot Your Passowrd?")
                                  .frame(width: 270, height: 20, alignment: .center)
                                  .padding(.top,0)

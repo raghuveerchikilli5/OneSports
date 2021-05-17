@@ -22,6 +22,8 @@
 		18A1366E264AB568004A59B6 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366C264AB568004A59B6 /* Dashboard.swift */; };
 		18A1366F264AB568004A59B6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366D264AB568004A59B6 /* login.swift */; };
 		18A13674264C0390004A59B6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A13673264C0390004A59B6 /* SignUpView.swift */; };
+		18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1368F2652BFF1004A59B6 /* ForgotUI.swift */; };
+		18A136922652BFF1004A59B6 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A136902652BFF1004A59B6 /* ResetPassword.swift */; };
 		5E5A2B3E5C1BB359D31D333C /* Pods_OneSportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D81DE0C768DDDA750168EE /* Pods_OneSportsTests.framework */; };
 		81F0317BF7A3A397EC70E11F /* Pods_OneSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BDE0B3C2243E214805CB51 /* Pods_OneSports.framework */; };
 		CEC7B0136DF07F5E7E4D6C95 /* Pods_OneSports_OneSportsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0762FDDAAA9259F60B6EB3B /* Pods_OneSports_OneSportsUITests.framework */; };
@@ -66,6 +68,8 @@
 		18A1366C264AB568004A59B6 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		18A1366D264AB568004A59B6 /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		18A13673264C0390004A59B6 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		18A1368F2652BFF1004A59B6 /* ForgotUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUI.swift; sourceTree = "<group>"; };
+		18A136902652BFF1004A59B6 /* ResetPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		31371A4E79C5538C85EEF74D /* Pods-OneSports-OneSportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports-OneSportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneSports-OneSportsUITests/Pods-OneSports-OneSportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4457EAC08A2511951BA165F2 /* Pods-OneSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports.debug.xcconfig"; path = "Target Support Files/Pods-OneSports/Pods-OneSports.debug.xcconfig"; sourceTree = "<group>"; };
 		61A9F64CBE63745A575AF697 /* Pods-OneSportsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSportsTests.release.xcconfig"; path = "Target Support Files/Pods-OneSportsTests/Pods-OneSportsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				18A1366D264AB568004A59B6 /* login.swift */,
 				1812BF6926410FFC00F8CF49 /* ContentView.swift */,
 				18A13673264C0390004A59B6 /* SignUpView.swift */,
+				18A1368F2652BFF1004A59B6 /* ForgotUI.swift */,
+				18A136902652BFF1004A59B6 /* ResetPassword.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -475,11 +481,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A136922652BFF1004A59B6 /* ResetPassword.swift in Sources */,
 				1812BFA1264113E400F8CF49 /* LoginViewController.swift in Sources */,
 				1812BFA0264113E400F8CF49 /* CreateAccountViewController.swift in Sources */,
 				18A1366E264AB568004A59B6 /* Dashboard.swift in Sources */,
 				1812BF6626410FFC00F8CF49 /* AppDelegate.swift in Sources */,
 				18A1366F264AB568004A59B6 /* login.swift in Sources */,
+				18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */,
 				1812BF6826410FFC00F8CF49 /* SceneDelegate.swift in Sources */,
 				18A13674264C0390004A59B6 /* SignUpView.swift in Sources */,
 				1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */,
