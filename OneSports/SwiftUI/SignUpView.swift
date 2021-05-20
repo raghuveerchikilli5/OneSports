@@ -42,12 +42,8 @@ struct SignUpView: View {
         @State  var bloodVal = ""
         @State  var dominatVal = ""
         
-        
-        
-        
-        
-                   @State var login1:Bool = false
-                   @State var tokenMain = ""
+        @State var login1:Bool = false
+        @State var tokenMain = ""
         @State var name = ""
         @State var selected = "Gender"
         @State var selected2 = "BloodGroup"
@@ -407,13 +403,6 @@ struct SignUpView: View {
                             
                             loginT = true
                         }
-                        
-                        
-                        
-                        
-                        
-
-                       
                        }
                        break
                    case .failure(let error):
@@ -487,9 +476,7 @@ struct SignUpView: View {
                                      values3.append(value)
                                                                                                        
                                      }
-                                     
-                                
-                                     
+                            
                              }
                                  
                                print(values)

@@ -16,4 +16,11 @@ target 'OneSports' do
     # Pods for testing
   end
   pod 'Alamofire'
+pod 'FBSDKCoreKit'
+ pod 'FBSDKLoginKit'
+ pod 'FBSDKShareKit'
+pod 'Firebase/Analytics'
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 end
