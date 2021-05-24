@@ -142,10 +142,12 @@ struct ContentView: View {
                                 }
                                 
                                 Button(action: {
-                                    GIDSignIn.sharedInstance().clientID = "148090501583-do7o6p9vdt12i52rq5ddt3qsabvmk30d.apps.googleusercontent.com"
+                                    GIDSignIn.sharedInstance().clientID = "439464976399-v9m4lsqrm5f73bpcfr5b8jje8klrnp9b.apps.googleusercontent.com"
                                 
                                     GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
                                     GIDSignIn.sharedInstance()?.signIn()
+                                    
+                                    
                                     
                                     print("sign up bin tapped ggol")
                                 }) {
@@ -160,7 +162,7 @@ struct ContentView: View {
                                             RoundedRectangle(cornerRadius: 35)
                                                 .stroke(Color.red, lineWidth: 2)
                                         )
-                                }
+                                }  
                                 
                             }
                             
@@ -173,33 +175,6 @@ struct ContentView: View {
             }
         }
         .padding(0.0)
-    }
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-      // ...
-      if let error = error {
-       print(error)
-        return
-      }
-
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                        accessToken: authentication.accessToken)
-        
-        Auth.auth().signIn(with: credential) { (result, error) in
-            
-            if error != nil {
-                
-                print(error?.localizedDescription)
-            }
-            
-            
-            print("user is",result?.user.email)
-            
-            
-        }
-        
-        
-      // ...
     }
     
     

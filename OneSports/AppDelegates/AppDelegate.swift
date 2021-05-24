@@ -14,6 +14,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 
 
+ 
 
 
 import FirebaseCore
@@ -31,8 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.app()
-        
+        FirebaseApp.configure()
    
         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
        
@@ -47,6 +47,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+                                        // ...
+                                        if let error = error {
+                                         print(error)
+                                          return
+                                        }
+
+                                        guard let authentication = user.authentication else { return }
+                                        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                                                          accessToken: authentication.accessToken)
+                                          
+                                          Auth.auth().signIn(with: credential) { (result, error) in
+                                              
+                                              if error != nil {
+                                                  
+                                                  print(error?.localizedDescription)
+                                              }
+                                              
+                                              
+                                              print("user is",result?.user.email)
+                                              
+                                              
+                                          }
+                                          
+                                          
+                                        // ...
+                                      }
 
     // MARK: UISceneSession Lifecycle
 
@@ -68,10 +95,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     
   
 
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
