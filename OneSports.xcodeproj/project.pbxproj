@@ -10,21 +10,23 @@
 		1812BF6626410FFC00F8CF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6526410FFC00F8CF49 /* AppDelegate.swift */; };
 		1812BF6826410FFC00F8CF49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6726410FFC00F8CF49 /* SceneDelegate.swift */; };
 		1812BF6A26410FFC00F8CF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6926410FFC00F8CF49 /* ContentView.swift */; };
-		1812BF6D26410FFC00F8CF49 /* OneSports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6B26410FFC00F8CF49 /* OneSports.xcdatamodeld */; };
 		1812BF6F26410FFD00F8CF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1812BF6E26410FFD00F8CF49 /* Assets.xcassets */; };
 		1812BF7226410FFD00F8CF49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1812BF7126410FFD00F8CF49 /* Preview Assets.xcassets */; };
-		1812BF7526410FFD00F8CF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1812BF7326410FFD00F8CF49 /* LaunchScreen.storyboard */; };
 		1812BF8026410FFD00F8CF49 /* OneSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF7F26410FFD00F8CF49 /* OneSportsTests.swift */; };
 		1812BF8B26410FFD00F8CF49 /* OneSportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF8A26410FFD00F8CF49 /* OneSportsUITests.swift */; };
 		1812BFA0264113E400F8CF49 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9D264113E400F8CF49 /* CreateAccountViewController.swift */; };
 		1812BFA1264113E400F8CF49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9E264113E400F8CF49 /* LoginViewController.swift */; };
 		1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9F264113E400F8CF49 /* ViewController.swift */; };
+		188C3755265E33A1007CCCB5 /* VerifyOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C3754265E33A1007CCCB5 /* VerifyOTP.swift */; };
+		18939590265D018A0003E6D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893958F265D01890003E6D0 /* LoginViewModel.swift */; };
 		18A1366E264AB568004A59B6 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366C264AB568004A59B6 /* Dashboard.swift */; };
 		18A1366F264AB568004A59B6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366D264AB568004A59B6 /* login.swift */; };
 		18A13674264C0390004A59B6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A13673264C0390004A59B6 /* SignUpView.swift */; };
 		18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1368F2652BFF1004A59B6 /* ForgotUI.swift */; };
 		18A136922652BFF1004A59B6 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A136902652BFF1004A59B6 /* ResetPassword.swift */; };
-		18A136C7265B7967004A59B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18A136C6265B7967004A59B6 /* GoogleService-Info.plist */; };
+		18A1377E265E8DA4004A59B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18A13779265E8DA2004A59B6 /* GoogleService-Info.plist */; };
+		18A13780265E8DA4004A59B6 /* OneSports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A1377C265E8DA4004A59B6 /* OneSports.xcdatamodeld */; };
+		18A13796265E8FAD004A59B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A13794265E8FAD004A59B6 /* LaunchScreen.storyboard */; };
 		5E5A2B3E5C1BB359D31D333C /* Pods_OneSportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D81DE0C768DDDA750168EE /* Pods_OneSportsTests.framework */; };
 		81F0317BF7A3A397EC70E11F /* Pods_OneSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BDE0B3C2243E214805CB51 /* Pods_OneSports.framework */; };
 		CEC7B0136DF07F5E7E4D6C95 /* Pods_OneSports_OneSportsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0762FDDAAA9259F60B6EB3B /* Pods_OneSports_OneSportsUITests.framework */; };
@@ -52,10 +54,8 @@
 		1812BF6526410FFC00F8CF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1812BF6726410FFC00F8CF49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1812BF6926410FFC00F8CF49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1812BF6C26410FFC00F8CF49 /* OneSports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneSports.xcdatamodel; sourceTree = "<group>"; };
 		1812BF6E26410FFD00F8CF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1812BF7126410FFD00F8CF49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1812BF7426410FFD00F8CF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1812BF7B26410FFD00F8CF49 /* OneSportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneSportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1812BF7F26410FFD00F8CF49 /* OneSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSportsTests.swift; sourceTree = "<group>"; };
 		1812BF8126410FFD00F8CF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,13 +65,18 @@
 		1812BF9D264113E400F8CF49 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		1812BF9E264113E400F8CF49 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1812BF9F264113E400F8CF49 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		188C3754265E33A1007CCCB5 /* VerifyOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTP.swift; sourceTree = "<group>"; };
+		1893958F265D01890003E6D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		18A1366C264AB568004A59B6 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		18A1366D264AB568004A59B6 /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		18A13673264C0390004A59B6 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		18A1368F2652BFF1004A59B6 /* ForgotUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUI.swift; sourceTree = "<group>"; };
 		18A136902652BFF1004A59B6 /* ResetPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
-		18A136C6265B7967004A59B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SwiftUI/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18A136E5265B7D5C004A59B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A13779265E8DA2004A59B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18A1377B265E8DA3004A59B6 /* OneSportsDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = OneSportsDebug.entitlements; sourceTree = "<group>"; };
+		18A1377D265E8DA4004A59B6 /* OneSports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneSports.xcdatamodel; sourceTree = "<group>"; };
+		18A13795265E8FAD004A59B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = filess/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31371A4E79C5538C85EEF74D /* Pods-OneSports-OneSportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports-OneSportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneSports-OneSportsUITests/Pods-OneSports-OneSportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4457EAC08A2511951BA165F2 /* Pods-OneSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports.debug.xcconfig"; path = "Target Support Files/Pods-OneSports/Pods-OneSports.debug.xcconfig"; sourceTree = "<group>"; };
 		61A9F64CBE63745A575AF697 /* Pods-OneSportsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSportsTests.release.xcconfig"; path = "Target Support Files/Pods-OneSportsTests/Pods-OneSportsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,15 +141,15 @@
 		1812BF6426410FFC00F8CF49 /* OneSports */ = {
 			isa = PBXGroup;
 			children = (
+				18A13778265E8D94004A59B6 /* filess */,
+				18A136E5265B7D5C004A59B6 /* Info.plist */,
+				18A13794265E8FAD004A59B6 /* LaunchScreen.storyboard */,
+				1893958E265D01500003E6D0 /* ViewModel */,
 				18A13683264EBEFD004A59B6 /* Assets */,
 				18A13682264EBEF4004A59B6 /* AppDelegates */,
 				18A1367F264EBEB4004A59B6 /* Model */,
 				1812BF9C264113B600F8CF49 /* Controllers */,
 				1812BF9B2641139C00F8CF49 /* SwiftUI */,
-				1812BF7326410FFD00F8CF49 /* LaunchScreen.storyboard */,
-				18A136E5265B7D5C004A59B6 /* Info.plist */,
-				18A136C6265B7967004A59B6 /* GoogleService-Info.plist */,
-				1812BF6B26410FFC00F8CF49 /* OneSports.xcdatamodeld */,
 				1812BF7026410FFD00F8CF49 /* Preview Content */,
 			);
 			path = OneSports;
@@ -184,6 +189,7 @@
 				18A13673264C0390004A59B6 /* SignUpView.swift */,
 				18A1368F2652BFF1004A59B6 /* ForgotUI.swift */,
 				18A136902652BFF1004A59B6 /* ResetPassword.swift */,
+				188C3754265E33A1007CCCB5 /* VerifyOTP.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				1812BF9F264113E400F8CF49 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1893958E265D01500003E6D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1893958F265D01890003E6D0 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		18A1367F264EBEB4004A59B6 /* Model */ = {
@@ -221,6 +235,16 @@
 				1812BF6E26410FFD00F8CF49 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		18A13778265E8D94004A59B6 /* filess */ = {
+			isa = PBXGroup;
+			children = (
+				18A13779265E8DA2004A59B6 /* GoogleService-Info.plist */,
+				18A1377C265E8DA4004A59B6 /* OneSports.xcdatamodeld */,
+				18A1377B265E8DA3004A59B6 /* OneSportsDebug.entitlements */,
+			);
+			path = filess;
 			sourceTree = "<group>";
 		};
 		97C6E219EE3C9B3DAB3CB2EF /* Pods */ = {
@@ -354,8 +378,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1812BF7526410FFD00F8CF49 /* LaunchScreen.storyboard in Resources */,
-				18A136C7265B7967004A59B6 /* GoogleService-Info.plist in Resources */,
+				18A1377E265E8DA4004A59B6 /* GoogleService-Info.plist in Resources */,
+				18A13796265E8FAD004A59B6 /* LaunchScreen.storyboard in Resources */,
 				1812BF7226410FFD00F8CF49 /* Preview Assets.xcassets in Resources */,
 				1812BF6F26410FFD00F8CF49 /* Assets.xcassets in Resources */,
 			);
@@ -487,16 +511,18 @@
 			files = (
 				18A136922652BFF1004A59B6 /* ResetPassword.swift in Sources */,
 				1812BFA1264113E400F8CF49 /* LoginViewController.swift in Sources */,
+				188C3755265E33A1007CCCB5 /* VerifyOTP.swift in Sources */,
 				1812BFA0264113E400F8CF49 /* CreateAccountViewController.swift in Sources */,
 				18A1366E264AB568004A59B6 /* Dashboard.swift in Sources */,
 				1812BF6626410FFC00F8CF49 /* AppDelegate.swift in Sources */,
 				18A1366F264AB568004A59B6 /* login.swift in Sources */,
 				18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */,
 				1812BF6826410FFC00F8CF49 /* SceneDelegate.swift in Sources */,
+				18939590265D018A0003E6D0 /* LoginViewModel.swift in Sources */,
 				18A13674264C0390004A59B6 /* SignUpView.swift in Sources */,
 				1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */,
 				1812BF6A26410FFC00F8CF49 /* ContentView.swift in Sources */,
-				1812BF6D26410FFC00F8CF49 /* OneSports.xcdatamodeld in Sources */,
+				18A13780265E8DA4004A59B6 /* OneSports.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,10 +558,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1812BF7326410FFD00F8CF49 /* LaunchScreen.storyboard */ = {
+		18A13794265E8FAD004A59B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1812BF7426410FFD00F8CF49 /* Base */,
+				18A13795265E8FAD004A59B6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -594,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -649,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -665,17 +691,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = OneSports/OneSportsDebug.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"OneSports/Preview Content\"";
-				DEVELOPMENT_TEAM = Q95T2MGCP9;
+				DEVELOPMENT_TEAM = 4H4X39U7P4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = OneSports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sreenidhi.OneSports;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sreenidhi1.OneSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "OneSports Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -689,14 +718,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OneSports/Preview Content\"";
-				DEVELOPMENT_TEAM = Q95T2MGCP9;
+				DEVELOPMENT_TEAM = XGN2C3ZV7H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = OneSports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sreenidhi.OneSports;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sreenidhi1.OneSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -833,12 +862,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1812BF6B26410FFC00F8CF49 /* OneSports.xcdatamodeld */ = {
+		18A1377C265E8DA4004A59B6 /* OneSports.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1812BF6C26410FFC00F8CF49 /* OneSports.xcdatamodel */,
+				18A1377D265E8DA4004A59B6 /* OneSports.xcdatamodel */,
 			);
-			currentVersion = 1812BF6C26410FFC00F8CF49 /* OneSports.xcdatamodel */;
+			currentVersion = 18A1377D265E8DA4004A59B6 /* OneSports.xcdatamodel */;
 			path = OneSports.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

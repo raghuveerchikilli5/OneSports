@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>439464976399-v9m4lsqrm5f73bpcfr5b8jje8klrnp9b.apps.googleusercontent.com</string>
+	<string>439464976399-k3jqb96ijett0dihbgqhj5k5tpvk5i00.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.439464976399-v9m4lsqrm5f73bpcfr5b8jje8klrnp9b</string>
+	<string>com.googleusercontent.apps.439464976399-k3jqb96ijett0dihbgqhj5k5tpvk5i00</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDoL6nahFpMLsMIFcp6YwjCz5kT0Jl6ER4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.sreenidhi.OneSports</string>
+	<string>com.sreenidhi1.OneSports</string>
 	<key>PROJECT_ID</key>
 	<string>sreenidhi1sports-1378a</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:439464976399:ios:f35aadd99c65e89cd8437a</string>
+	<string>1:439464976399:ios:86b014a414833d04d8437a</string>
 </dict>
 </plist>

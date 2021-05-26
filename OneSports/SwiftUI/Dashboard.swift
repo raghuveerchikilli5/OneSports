@@ -11,12 +11,10 @@ struct Dashboard: View {
     var body: some View {
         NavigationView {
                    Text("login successed")
-                   
-                   
                }
-              
     }
 }
+
 
 struct Dashboard_Previews: PreviewProvider {
     static var previews: some View {

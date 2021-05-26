@@ -10,6 +10,9 @@ import Alamofire
 
 struct ForgotUI: View {
     @State var mobileNumber = ""
+    @State var otp = ""
+    @State var email = false
+    @State var login2:Bool = false
     var body: some View {
         NavigationView {
            
@@ -24,7 +27,14 @@ struct ForgotUI: View {
                         .font(.system(size:35))
                         
                         .font(Font.headline.weight(.bold))
-                  
+                    NavigationLink(destination: VerifyOTP(mobileNumber: mobileNumber) ,isActive: $login2) {
+                                                                   
+                       
+                        
+                    
+                    }
+                    
+                    
                       Text("Pleas enter your mobile number to receive a link to create a new password via email")
                           .foregroundColor(Color.gray)
                           .multilineTextAlignment(.center)
@@ -67,7 +77,8 @@ struct ForgotUI: View {
                   }
                     
                   
-}
+}.navigationBarTitle("")
+                  .navigationBarHidden(true)
             
             Spacer()
             
@@ -76,6 +87,8 @@ struct ForgotUI: View {
     }
     
     func generateOTP(){
+        print(mobileNumber)
+        login2 = true
            let headers:HTTPHeaders = [
        "Content-Type": "application/x-www-form-urlencoded",
        "Accept": "application/json",
@@ -86,36 +99,43 @@ struct ForgotUI: View {
         let param : Parameters  = [
        
            "mobileNumber":mobileNumber,
+            
         
         ]
-        
+        print(param)
        
         
       let url2 = "https://staging.sreenidhi1sports.com/api/AppUsers/generateOTP"
 
-       AF.request(url2, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON {
+        AF.request(url2, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).responseJSON {
                  response in
-               
+       
                  switch response.result {
                  case .success(let value):
                      do {
                      
                        
-                        if  let data = value as? Any {
-                       
-                         
-                            print(data)
-                            
-                            
-                        }
+                        if  let data = value as? [String:Any] {
+                            print("error was ",data)
+                                              print("ok")
+                                                   if let  result = data["success"] as? Int {
+                                                       print("qwe")
+                                                       if result == 1 {
+                                                           login2 = true
+                                                       }
+                                                       
+                                                       
+                                                   }
                         
                         
                         
                      }
+                     }
                      break
                  case .failure(let error):
-                        
-                     print("failed response ",error)
+                    print(error.localizedDescription)
+                                    
+              
      //                print("sendLatLong Err", error.localizedDescription)
                                    
                  }
@@ -125,54 +145,7 @@ struct ForgotUI: View {
            }
     
     
-    func loginOTP(){
-           let headers:HTTPHeaders = [
-       "Content-Type": "application/x-www-form-urlencoded",
-       "Accept": "application/json",
-       "version":"1.0.0",
-        "source":"app"
-        ]
-      
-        let param : Parameters  = [
-       
-           "mobileNumber":mobileNumber,
-        
-        ]
-        
-       
-        
-      let url2 = "https://staging.sreenidhi1sports.com/api/AppUsers/loginOTP"
-
-       AF.request(url2, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON {
-                 response in
-               
-                 switch response.result {
-                 case .success(let value):
-                     do {
-                     
-                       
-                        if  let data = value as? Any {
-                       
-                         
-                            print(data)
-                            
-                            
-                        }
-                        
-                        
-                        
-                     }
-                     break
-                 case .failure(let error):
-                        
-                     print("failed response ",error)
-     //                print("sendLatLong Err", error.localizedDescription)
-                                   
-                 }
-             }
-         
-             
-           }
+    
     
     
     

@@ -345,7 +345,7 @@ struct SignUpView: View {
                      
                   }
                   .frame(maxWidth: .infinity)
-                  .padding(.top,60)
+                  .padding(.top,40)
                       
                   
                   
@@ -371,8 +371,8 @@ struct SignUpView: View {
         print("dfg")
          let param : Parameters  = [
             "name":"yashika",
-            "mobileNumber":"9966666400",
-            "email":"yashika@gmail.com",
+            "mobileNumber":"8500055588",
+            "email":"raghu85000@gmail.com",
             "gender":1,
             "password":"Yashika@94",
             "qualifications":"btech",
@@ -392,13 +392,14 @@ struct SignUpView: View {
         let url1 = "https://staging.sreenidhi1sports.com/api/AppUsers/registerUser"
           print(param)
      
-         AF.request(url1, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON {
+         AF.request(url1, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).responseJSON {
                    response in
                  
                    switch response.result {
                    case .success(let value):
                        do {
                          var data = value as? [String:Any]
+                        print(data)
                         if  let succss = data?["success"] as? Int {
                             
                             loginT = true
@@ -407,7 +408,7 @@ struct SignUpView: View {
                        break
                    case .failure(let error):
                           
-                       print("failed response ",error)
+                    print("failed response ",error.localizedDescription)
        //                print("sendLatLong Err", error.localizedDescription)
                                      
                    }

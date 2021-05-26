@@ -1,15 +1,16 @@
 //
-//  ResetPassword.swift
+//  VerifyOTP.swift
 //  OneSports
 //
-//  Created by apple on 17/05/21.
+//  Created by apple on 26/05/21.
 //
 
 import SwiftUI
 import Alamofire
 
-struct ResetPassword: View {
+struct VerifyOTP: View {
     @State var mobileNumber = ""
+    @State var otp = ""
     var body: some View {
         NavigationView {
            
@@ -17,57 +18,39 @@ struct ResetPassword: View {
              
                   VStack(spacing: 10) {
                  
-                      Text("New Password")
+                      Text("Verify OTP")
                           .foregroundColor(Color.black)
                           .multilineTextAlignment(.center)
                           .padding(.top, -20)
                         .font(.system(size:35))
                         
-                        .font(Font.headline.weight(.heavy))
+                        .font(Font.headline.weight(.bold))
                   
-                      Text("Please enter your mobile number to receive a link to create a new password via email")
+                      Text("Pleas enter your OTP to receive to  Number and create  new password ")
                           .foregroundColor(Color.gray)
                           .multilineTextAlignment(.center)
-                          .padding(.bottom, 0)
+                          .padding(.bottom, 10)
                           .font(.system(size: 16))
                         .frame(width: 330, height: 60, alignment: .center)
                       
-                    TextField("  New Password", text: $mobileNumber)
+                    TextField("  Mobile Number", text: $mobileNumber)
                                          .frame(width: 330, height: 60, alignment: .center)
                                              
                                              .overlay(
                                                  RoundedRectangle(cornerRadius: 35)
-                                                     .stroke(Color.gray, lineWidth: 1)
-                                             )
-                                             .padding(.top,10)
-                    TextField("  Confirm Password", text: $mobileNumber)
-                                         .frame(width: 330, height: 60, alignment: .center)
-                                             
-                                             .overlay(
-                                                 RoundedRectangle(cornerRadius: 35)
-                                                     .stroke(Color.gray, lineWidth: 1)
+                                                     .stroke(Color.gray, lineWidth: 2)
                                              )
                                              .padding(.top,20)
-                    
-                    
-                    Text("Include both lower and upper case characters Include at least one number or symbol be at least 8 characters long")
-                        .foregroundColor(Color.gray)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 10)
-                        .font(.system(size: 16))
-                      .frame(width: 330, height: 80, alignment: .center)
-                    
-                    
-                    
-                    
+                        
                         Button(action: {
                                                print("SwiftUI: Button tapped")
                                                // Call func in SomeView()
-                                               generateOTP()
+                                              
+                            loginOTP()
                                              
                                        })
                                        {
-                                               Text("Next")
+                                               Text("Send")
                                                .frame(width: 240, height: 25, alignment: .center)
                                                .padding()
                                                .foregroundColor(.white)
@@ -78,15 +61,14 @@ struct ResetPassword: View {
                                                                        .font(Font.headline.weight(.bold))
                                            
                                        }
-                        .padding(.top,-5)
+                                       .padding()
                   
                  Spacer()
                     
                   }
                     
                   
-}.navigationBarTitle("")
-                  .navigationBarHidden(true)
+}
             
             Spacer()
             
@@ -95,54 +77,7 @@ struct ResetPassword: View {
         
     }
     
-    func generateOTP(){
-           let headers:HTTPHeaders = [
-       "Content-Type": "application/x-www-form-urlencoded",
-       "Accept": "application/json",
-       "version":"1.0.0",
-        "source":"app"
-        ]
-      
-        let param : Parameters  = [
-       
-           "mobileNumber":mobileNumber,
-        
-        ]
-        
-       
-        
-      let url2 = "https://staging.sreenidhi1sports.com/api/AppUsers/generateOTP"
-
-       AF.request(url2, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON {
-                 response in
-               
-                 switch response.result {
-                 case .success(let value):
-                     do {
-                     
-                       
-                        if  let data = value as? Any {
-                       
-                         
-                            print(data)
-                            
-                            
-                        }
-                        
-                        
-                        
-                     }
-                     break
-                 case .failure(let error):
-                        
-                     print("failed response ",error)
-     //                print("sendLatLong Err", error.localizedDescription)
-                                   
-                 }
-             }
-         
-             
-           }
+ 
     
     
     func loginOTP(){
@@ -161,7 +96,7 @@ struct ResetPassword: View {
         
        
         
-      let url2 = "https://staging.sreenidhi1sports.com/api/AppUsers/loginOTP"
+      let url2 = "https://staging.sreenidhi1sports.com/api/AppUsers/VerifyOTP"
 
        AF.request(url2, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON {
                  response in
@@ -185,7 +120,7 @@ struct ResetPassword: View {
                      break
                  case .failure(let error):
                         
-                     print("failed response ",error)
+                    print("failed response ",error.failureReason)
      //                print("sendLatLong Err", error.localizedDescription)
                                    
                  }
@@ -202,9 +137,8 @@ struct ResetPassword: View {
     
     
     }
-
-struct ResetPassword_Previews: PreviewProvider {
+struct VerifyOTP_Previews: PreviewProvider {
     static var previews: some View {
-        ResetPassword()
+        VerifyOTP()
     }
 }
