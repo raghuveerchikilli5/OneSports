@@ -19,14 +19,14 @@
 		1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9F264113E400F8CF49 /* ViewController.swift */; };
 		188C3755265E33A1007CCCB5 /* VerifyOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C3754265E33A1007CCCB5 /* VerifyOTP.swift */; };
 		18939590265D018A0003E6D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893958F265D01890003E6D0 /* LoginViewModel.swift */; };
-		18A1366E264AB568004A59B6 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366C264AB568004A59B6 /* Dashboard.swift */; };
 		18A1366F264AB568004A59B6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366D264AB568004A59B6 /* login.swift */; };
 		18A13674264C0390004A59B6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A13673264C0390004A59B6 /* SignUpView.swift */; };
 		18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1368F2652BFF1004A59B6 /* ForgotUI.swift */; };
 		18A136922652BFF1004A59B6 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A136902652BFF1004A59B6 /* ResetPassword.swift */; };
 		18A1377E265E8DA4004A59B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18A13779265E8DA2004A59B6 /* GoogleService-Info.plist */; };
 		18A13780265E8DA4004A59B6 /* OneSports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A1377C265E8DA4004A59B6 /* OneSports.xcdatamodeld */; };
-		18A13796265E8FAD004A59B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A13794265E8FAD004A59B6 /* LaunchScreen.storyboard */; };
+		18A1380A2660BA96004A59B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A138082660BA96004A59B6 /* LaunchScreen.storyboard */; };
+		18B0511026611688002C6106 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0510F26611688002C6106 /* Dashboard.swift */; };
 		5E5A2B3E5C1BB359D31D333C /* Pods_OneSportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D81DE0C768DDDA750168EE /* Pods_OneSportsTests.framework */; };
 		81F0317BF7A3A397EC70E11F /* Pods_OneSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BDE0B3C2243E214805CB51 /* Pods_OneSports.framework */; };
 		CEC7B0136DF07F5E7E4D6C95 /* Pods_OneSports_OneSportsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0762FDDAAA9259F60B6EB3B /* Pods_OneSports_OneSportsUITests.framework */; };
@@ -67,16 +67,16 @@
 		1812BF9F264113E400F8CF49 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		188C3754265E33A1007CCCB5 /* VerifyOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTP.swift; sourceTree = "<group>"; };
 		1893958F265D01890003E6D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		18A1366C264AB568004A59B6 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		18A1366D264AB568004A59B6 /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		18A13673264C0390004A59B6 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		18A1368F2652BFF1004A59B6 /* ForgotUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUI.swift; sourceTree = "<group>"; };
 		18A136902652BFF1004A59B6 /* ResetPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
-		18A136E5265B7D5C004A59B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A13779265E8DA2004A59B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18A1377B265E8DA3004A59B6 /* OneSportsDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = OneSportsDebug.entitlements; sourceTree = "<group>"; };
 		18A1377D265E8DA4004A59B6 /* OneSports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneSports.xcdatamodel; sourceTree = "<group>"; };
-		18A13795265E8FAD004A59B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = filess/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18A138032660BA8A004A59B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A138092660BA96004A59B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18B0510F26611688002C6106 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		31371A4E79C5538C85EEF74D /* Pods-OneSports-OneSportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports-OneSportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneSports-OneSportsUITests/Pods-OneSports-OneSportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4457EAC08A2511951BA165F2 /* Pods-OneSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports.debug.xcconfig"; path = "Target Support Files/Pods-OneSports/Pods-OneSports.debug.xcconfig"; sourceTree = "<group>"; };
 		61A9F64CBE63745A575AF697 /* Pods-OneSportsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSportsTests.release.xcconfig"; path = "Target Support Files/Pods-OneSportsTests/Pods-OneSportsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,15 +141,10 @@
 		1812BF6426410FFC00F8CF49 /* OneSports */ = {
 			isa = PBXGroup;
 			children = (
-				18A13778265E8D94004A59B6 /* filess */,
-				18A136E5265B7D5C004A59B6 /* Info.plist */,
-				18A13794265E8FAD004A59B6 /* LaunchScreen.storyboard */,
-				1893958E265D01500003E6D0 /* ViewModel */,
-				18A13683264EBEFD004A59B6 /* Assets */,
-				18A13682264EBEF4004A59B6 /* AppDelegates */,
-				18A1367F264EBEB4004A59B6 /* Model */,
+				18A137FC2660B8CB004A59B6 /* Models */,
+				18A137ED2660B734004A59B6 /* SupoortFiles */,
+				18A137E92660B6EF004A59B6 /* Views */,
 				1812BF9C264113B600F8CF49 /* Controllers */,
-				1812BF9B2641139C00F8CF49 /* SwiftUI */,
 				1812BF7026410FFD00F8CF49 /* Preview Content */,
 			);
 			path = OneSports;
@@ -180,43 +175,13 @@
 			path = OneSportsUITests;
 			sourceTree = "<group>";
 		};
-		1812BF9B2641139C00F8CF49 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				18A1366C264AB568004A59B6 /* Dashboard.swift */,
-				18A1366D264AB568004A59B6 /* login.swift */,
-				1812BF6926410FFC00F8CF49 /* ContentView.swift */,
-				18A13673264C0390004A59B6 /* SignUpView.swift */,
-				18A1368F2652BFF1004A59B6 /* ForgotUI.swift */,
-				18A136902652BFF1004A59B6 /* ResetPassword.swift */,
-				188C3754265E33A1007CCCB5 /* VerifyOTP.swift */,
-			);
-			path = SwiftUI;
-			sourceTree = "<group>";
-		};
 		1812BF9C264113B600F8CF49 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1812BF9D264113E400F8CF49 /* CreateAccountViewController.swift */,
-				1812BF9E264113E400F8CF49 /* LoginViewController.swift */,
-				1812BF9F264113E400F8CF49 /* ViewController.swift */,
+				18B051002660BDE3002C6106 /* InitialController */,
+				18B050FB2660BD75002C6106 /* LoginC */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		1893958E265D01500003E6D0 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1893958F265D01890003E6D0 /* LoginViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		18A1367F264EBEB4004A59B6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		18A13682264EBEF4004A59B6 /* AppDelegates */ = {
@@ -237,14 +202,97 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		18A13778265E8D94004A59B6 /* filess */ = {
+		18A137E92660B6EF004A59B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18B051052660BEAC002C6106 /* DashBoard */,
+				18B051032660BE56002C6106 /* ForgotOTP */,
+				18B051022660BE42002C6106 /* RegisterViews */,
+				18B051012660BE29002C6106 /* LoginView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18A137ED2660B734004A59B6 /* SupoortFiles */ = {
+			isa = PBXGroup;
+			children = (
+				18A13683264EBEFD004A59B6 /* Assets */,
+				18A13682264EBEF4004A59B6 /* AppDelegates */,
+				18A138032660BA8A004A59B6 /* Info.plist */,
+				18A138082660BA96004A59B6 /* LaunchScreen.storyboard */,
 				18A13779265E8DA2004A59B6 /* GoogleService-Info.plist */,
 				18A1377C265E8DA4004A59B6 /* OneSports.xcdatamodeld */,
 				18A1377B265E8DA3004A59B6 /* OneSportsDebug.entitlements */,
 			);
-			path = filess;
+			path = SupoortFiles;
+			sourceTree = "<group>";
+		};
+		18A137FC2660B8CB004A59B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18B050FF2660BD88002C6106 /* AppleSigninModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18B050FB2660BD75002C6106 /* LoginC */ = {
+			isa = PBXGroup;
+			children = (
+				1812BF9E264113E400F8CF49 /* LoginViewController.swift */,
+			);
+			path = LoginC;
+			sourceTree = "<group>";
+		};
+		18B050FF2660BD88002C6106 /* AppleSigninModel */ = {
+			isa = PBXGroup;
+			children = (
+				1893958F265D01890003E6D0 /* LoginViewModel.swift */,
+				1812BF9D264113E400F8CF49 /* CreateAccountViewController.swift */,
+			);
+			path = AppleSigninModel;
+			sourceTree = "<group>";
+		};
+		18B051002660BDE3002C6106 /* InitialController */ = {
+			isa = PBXGroup;
+			children = (
+				1812BF9F264113E400F8CF49 /* ViewController.swift */,
+			);
+			path = InitialController;
+			sourceTree = "<group>";
+		};
+		18B051012660BE29002C6106 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				1812BF6926410FFC00F8CF49 /* ContentView.swift */,
+				18A1366D264AB568004A59B6 /* login.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		18B051022660BE42002C6106 /* RegisterViews */ = {
+			isa = PBXGroup;
+			children = (
+				18A13673264C0390004A59B6 /* SignUpView.swift */,
+			);
+			path = RegisterViews;
+			sourceTree = "<group>";
+		};
+		18B051032660BE56002C6106 /* ForgotOTP */ = {
+			isa = PBXGroup;
+			children = (
+				188C3754265E33A1007CCCB5 /* VerifyOTP.swift */,
+				18A136902652BFF1004A59B6 /* ResetPassword.swift */,
+				18A1368F2652BFF1004A59B6 /* ForgotUI.swift */,
+			);
+			path = ForgotOTP;
+			sourceTree = "<group>";
+		};
+		18B051052660BEAC002C6106 /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				18B0510F26611688002C6106 /* Dashboard.swift */,
+			);
+			path = DashBoard;
 			sourceTree = "<group>";
 		};
 		97C6E219EE3C9B3DAB3CB2EF /* Pods */ = {
@@ -379,8 +427,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A1377E265E8DA4004A59B6 /* GoogleService-Info.plist in Resources */,
-				18A13796265E8FAD004A59B6 /* LaunchScreen.storyboard in Resources */,
 				1812BF7226410FFD00F8CF49 /* Preview Assets.xcassets in Resources */,
+				18A1380A2660BA96004A59B6 /* LaunchScreen.storyboard in Resources */,
 				1812BF6F26410FFD00F8CF49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,7 +561,6 @@
 				1812BFA1264113E400F8CF49 /* LoginViewController.swift in Sources */,
 				188C3755265E33A1007CCCB5 /* VerifyOTP.swift in Sources */,
 				1812BFA0264113E400F8CF49 /* CreateAccountViewController.swift in Sources */,
-				18A1366E264AB568004A59B6 /* Dashboard.swift in Sources */,
 				1812BF6626410FFC00F8CF49 /* AppDelegate.swift in Sources */,
 				18A1366F264AB568004A59B6 /* login.swift in Sources */,
 				18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */,
@@ -522,6 +569,7 @@
 				18A13674264C0390004A59B6 /* SignUpView.swift in Sources */,
 				1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */,
 				1812BF6A26410FFC00F8CF49 /* ContentView.swift in Sources */,
+				18B0511026611688002C6106 /* Dashboard.swift in Sources */,
 				18A13780265E8DA4004A59B6 /* OneSports.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,10 +606,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		18A13794265E8FAD004A59B6 /* LaunchScreen.storyboard */ = {
+		18A138082660BA96004A59B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				18A13795265E8FAD004A59B6 /* Base */,
+				18A138092660BA96004A59B6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -697,7 +745,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OneSports/Preview Content\"";
 				DEVELOPMENT_TEAM = 4H4X39U7P4;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = OneSports/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OneSports/SupoortFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,7 +768,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OneSports/Preview Content\"";
 				DEVELOPMENT_TEAM = XGN2C3ZV7H;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = OneSports/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OneSports/SupoortFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

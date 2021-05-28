@@ -5,12 +5,6 @@ import GoogleSignIn
 import Firebase
 import AuthenticationServices
 
-
-
-
-
-
-
 struct ContentView: View {
     @StateObject var loginData = LoginViewModel()
     @AppStorage("logged") var logged = false
