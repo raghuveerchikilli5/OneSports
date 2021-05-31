@@ -28,10 +28,7 @@ struct ForgotUI: View {
                         
                         .font(Font.headline.weight(.bold))
                     NavigationLink(destination: VerifyOTP(mobileNumber: mobileNumber) ,isActive: $login2) {
-                                                                   
-                       
-                        
-                    
+   
                     }
                     
                     
@@ -123,12 +120,9 @@ struct ForgotUI: View {
                                                        if result == 1 {
                                                            login2 = true
                                                        }
-                                                       
-                                                       
+                                                    
                                                    }
-                        
-                        
-                        
+    
                      }
                      }
                      break
@@ -143,16 +137,7 @@ struct ForgotUI: View {
          
              
            }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     }
 struct ForgotUI_Previews: PreviewProvider {

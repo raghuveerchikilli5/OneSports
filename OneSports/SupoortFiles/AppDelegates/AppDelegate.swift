@@ -9,14 +9,7 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
-
-
 import FBSDKCoreKit
-
-
- 
-
-
 import FirebaseCore
 import FirebaseAuth
 import UserNotifications

@@ -371,7 +371,7 @@ struct SignUpView: View {
         print("dfg")
          let param : Parameters  = [
             "name":"yashika",
-            "mobileNumber":"8500055588",
+            "mobileNumber":"8500055580",
             "email":"raghu85000@gmail.com",
             "gender":1,
             "password":"Yashika@94",

@@ -123,13 +123,17 @@ struct login: View {
              }.navigationBarTitle("")
                  .navigationBarHidden(true)
              }
-            
+          
+    
+    
              func primaryAPI(){
+                
                  let param : Parameters  = [
 
                      "userName":mail,
                      "password":password
                  ]
+                
                  let headers:HTTPHeaders = [
                      "Content-Type": "application/x-www-form-urlencoded",
                      "Accept": "application/json",
@@ -137,11 +141,12 @@ struct login: View {
                      "source":"app"
                  ]
                 
+                
                 let url1 = "https://staging.sreenidhi1sports.com/api/AppUsers/loginWithPassword"
          //
-                  print(param)
-             
-                 AF.request(url1, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON { [self]
+         print(param)
+                
+                 AF.request(url1, method: .post, parameters:param ,encoding: URLEncoding(), headers: headers).responseJSON { [self]
                            response in
                          
                            switch response.result {
