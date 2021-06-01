@@ -13,6 +13,7 @@ struct Dashboard: View {
     @State var dashboardCount: Int?
     @State var keys1 = [String]()
     @State var values1 = [Int]()
+    @State var login1:Bool = false
     @State var images = [UIImage(named: "Student"),UIImage(named: "Centre"),UIImage(named: "Courses"),UIImage(named: "Staff")]
     let columns = [
             GridItem(.flexible()),
@@ -27,13 +28,7 @@ struct Dashboard: View {
             
         
             ZStack {
-                  
-                   
-                  
-           
-           
-         
-            
+             
             ScrollView(.vertical) {
            
                 VStack {
@@ -71,15 +66,10 @@ struct Dashboard: View {
                     Spacer()
                     HStack {
                         Button(action: {
-                                                                        
-                                                                            
-                                                                            
+                                                        
                                                              print("apple sign in")
                                                  }) {
-                                                                            
-                                                                            
-                                                    
-                                                                        }
+                                                       }
                                              Spacer()
                                              
                         Image("logo_1")
@@ -106,6 +96,10 @@ struct Dashboard: View {
                         print("dddd",dashboardCount)
                                     print("ContentView appeared!")
                                 }
+                    NavigationLink(destination: Students() ,isActive: $login1) {
+                                                                                                              
+                                                                       }
+                    
                     
                     Spacer()
                     
@@ -121,7 +115,12 @@ struct Dashboard: View {
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: UIScreen.main.bounds.width / 2.5, height: 200)
-                                    
+                                        .onTapGesture {
+                                                                                 
+                                                        login1 = true
+                                                                                  
+                                                                                  
+                                                        }
                                     Text("\(values1[index1])  \(keys1[index1])")
                                         .frame(width: 120, height: 30, alignment: .center)
                                             .padding(.bottom, 20)
@@ -262,6 +261,7 @@ struct User {
 }
 struct MenuContent: View {
     @State private var fruits = ["DASHBOARD", "CENTERS", "STUDENTS", "STAFF","COURSES", "PROCUREMENT", "POST", "ASSESSMENT","CHECK TRACKING","LOGOUT"]
+    @State public var dash:Bool = false
         @State private var selectedFruit: String?
     var body: some View {
         
@@ -280,6 +280,7 @@ struct MenuContent: View {
                                 Text(fruit)
                                     .frame(height:35)
                                     .onTapGesture {
+                                        dash = true
                                         self.selectedFruit = fruit
                                 }
                                     .listRowBackground(self.selectedFruit == fruit ? Color.red.opacity(0.3) : Color(UIColor.systemGroupedBackground))
