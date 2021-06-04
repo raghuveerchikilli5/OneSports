@@ -7,9 +7,14 @@
 
 import SwiftUI
 import Alamofire
+import UIKit
+
 struct AddStudent: View {
     
     //  Declaring  Variables
+    
+    @State private var isShowPhotoLibrary = false
+    @State private var image = UIImage()
     @State var showDatePicker: Bool = false
        @State var savedDate: Date? = nil
     @State var mail: String = ""
@@ -19,18 +24,25 @@ struct AddStudent: View {
         @State  var expand2:Bool = false
         @State  var Genders = [String]()
         @State  var labels = [String]()
+        @State  var centreNames = [String]()
+        @State  var batchNames = [String]()
+       @State  var batchName = ""
         @State  var labels2 = ["String","d","r"]
+    
+        @State  var centreIDs = [Int]()
+    @State  var centreID = 0
+    
         @State  var values = [Int]()
         @State  var values1 = [Int]()
-    let dateFormatter: DateFormatter = {
+    @State  var  dateFormatter: DateFormatter = {
             let formatter = DateFormatter()
             formatter.dateStyle = .long
             return formatter
         }()
-    
+   
     
     @State private var birthDate = Date()
-        @State  var value1Main = 0
+        @State  var centre = 0
         
         @State  var labels3 = [String]()
         @State  var labels4 = [String]()
@@ -46,7 +58,7 @@ struct AddStudent: View {
         
         @State  var value3Main = 0
         
-        @State  var genderVal = ""
+      
         @State  var bloodVal = ""
         @State  var dominatVal = ""
     @State var back:Bool = false
@@ -94,8 +106,8 @@ struct AddStudent: View {
                                                     minWidth: 0,
                                                     maxWidth: .infinity,
                                                     minHeight: 0,
-                                                    maxHeight: .infinity,
-                                                    alignment: .topLeading
+                                                    maxHeight: 50,
+                                                    alignment: .leading
                                                   )
                                                 .onTapGesture {
                                                     back = true
@@ -106,13 +118,37 @@ struct AddStudent: View {
                                                .background(Color.red)
                         
                         
-                        
-                            Image("apple")
+                        VStack{
+                        Image(uiImage: self.image)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 100, height: 100, alignment: .center)
+                            .background(Color.red)
+                            .frame(width: 80, height: 80, alignment: .center)
+                            .cornerRadius(10)
                                 .padding(.top,40)
-                                .padding(.bottom,40)
+                    Button(action: {
+                                       self.isShowPhotoLibrary = true
+                                   }) {
+                                     
+                                           
+                        HStack{
+                            Spacer()
+                                        Text("+")
+                                        .font(.headline)
+                                       .frame(minWidth: 30, maxWidth: 30, minHeight: 30, maxHeight: 30)
+                                       .background(Color.blue)
+                                       .foregroundColor(.white)
+                                       .cornerRadius(20)
+                                            .padding(.top,-20)
+                        
+                        }.frame(width: 100)
+                        
+                        
+                        
+                                   }
+                        Spacer()
+                        }
+                        
                         
                         HStack {
                                 Text("First Name *")
@@ -145,26 +181,27 @@ struct AddStudent: View {
                                                                                  Spacer()
                                                                          }
                             
-                            
+                         
                                    DisclosureGroup(selected,isExpanded:$expand) {
-                                
+                                    ZStack {
                                 VStack {
-                                    ForEach(Array(labels2.enumerated()), id: \.1) { index, element in
+                                    ForEach(Array(centreNames.enumerated()), id: \.1) { index, element in
                                        
                                         Text("\(element)")
                                             .font(.title3)
                                             .padding(.all)
                                             .onTapGesture {
                                                 selected = element
+                                                print("ok",centreIDs[index])
+                                                batchDropDown(id: centreIDs[index])
                                                 
-                                                value1Main = values1[index]
                                                 
-                                                print(value1Main)
                                                 self.expand.toggle()
                                             }
                                     }
                                
                                 }
+                                    }
                             }
                                    
                                    .accentColor(.black)
@@ -187,7 +224,7 @@ struct AddStudent: View {
                                    
                             Spacer()
                             
-                            
+                        
                             
                      }.padding(.top,5)
                         HStack {
@@ -202,17 +239,15 @@ struct AddStudent: View {
                                                         DisclosureGroup(selectBatch,isExpanded:$expand1) {
                                                      
                                                      VStack {
-                                                         ForEach(Array(labels2.enumerated()), id: \.1) { index, element in
+                                                         ForEach(Array(batchNames.enumerated()), id: \.1) { index, element in
                                                             
                                                              Text("\(element)")
                                                                  .font(.title3)
                                                                  .padding(.all)
                                                                  .onTapGesture {
-                                                                     selected = element
-                                                                     
-                                                                     value1Main = values1[index]
-                                                                     
-                                                                     print(value1Main)
+                                                                    selectBatch = element
+                                                                 
+                                                                   
                                                                      self.expand1.toggle()
                                                                  }
                                                          }
@@ -254,54 +289,58 @@ struct AddStudent: View {
 
                                              
                                              
-                                             VStack{
-                                                        DisclosureGroup(selectGender,isExpanded:$expand2) {
-                                                     
-                                                     VStack {
-                                                         ForEach(Array(labels2.enumerated()), id: \.1) { index, element in
-                                                            
-                                                             Text("\(element)")
-                                                                 .font(.title3)
-                                                                 .padding(.all)
-                                                                 .onTapGesture {
-                                                                     selected = element
-                                                                     
-                                                                     value1Main = values1[index]
-                                                                     
-                                                                     print(value1Main)
-                                                                     self.expand2.toggle()
-                                                                 }
-                                                         }
-                                                         
-                                                         
-                                                         
-                                                     }
-                                                 }
-                                                        
-                                                        .accentColor(.black)
-                                                        .padding(.all)
-                         
-                                                        .font(.system(size:18))
-                                                 .foregroundColor(Color.black)
-                                                 .foregroundColor(.white)
-                                                       
-                                                 .background(Color.clear)
-                                                 .font(.title2)
-                                                 .cornerRadius(8)
-                                              
-                                                       
-                                                               .overlay(
-                                                                   RoundedRectangle(cornerRadius: 35)
-                                                                       .stroke(Color.gray, lineWidth: 1)
-                                                               )
-                                                        .frame(width:330)
-                                                        
-                                                 Spacer()
-                                                 
-                                                 
-                                                 
-                                          }.padding(.top,5)
+                                          
                         VStack{
+                            
+                            VStack{
+                                       DisclosureGroup(selectGender,isExpanded:$expand2) {
+                                    
+                                    VStack {
+                                        ForEach(Array(labels2.enumerated()), id: \.1) { index, element in
+                                           
+                                            Text("\(element)")
+                                                .font(.title3)
+                                                .padding(.all)
+                                                .onTapGesture {
+                                                   selectGender = element
+                                                    
+                                                   value2Main = values[index]
+                                                    
+                                                    print(value2Main)
+                                                    self.expand2.toggle()
+                                                }
+                                        }
+                                        
+                                        
+                                        
+                                    }
+                                }
+                                       
+                                       .accentColor(.black)
+                                       .padding(.all)
+        
+                                       .font(.system(size:18))
+                                .foregroundColor(Color.black)
+                                .foregroundColor(.white)
+                                      
+                                .background(Color.clear)
+                                .font(.title2)
+                                .cornerRadius(8)
+                             
+                                      
+                                              .overlay(
+                                                  RoundedRectangle(cornerRadius: 35)
+                                                      .stroke(Color.gray, lineWidth: 1)
+                                              )
+                                       .frame(width:330)
+                                       
+                                Spacer()
+                                
+                                
+                                
+                         }.padding(.top,5)
+                            
+                            
                         
                                            HStack {
                                                    Text("Mobile Numer *")
@@ -309,7 +348,7 @@ struct AddStudent: View {
                                                    Spacer()
                                            }
                                            HStack {
-                                               TextField("    Enter mobile number", text: $name)
+                                               TextField("    Enter mobile number", text: $mobileNumber)
                                                    .background(Color.gray.opacity(0.1))
                                                .frame(width: 330, height: 60, alignment: .center)
                                                    .overlay(
@@ -326,7 +365,7 @@ struct AddStudent: View {
                                                                          Spacer()
                                                                  }
                                                     HStack {
-                                                                     TextField("    Enter Email ID", text: $name)
+                                                                     TextField("    Enter Email ID", text: $email)
                                                                          .background(Color.gray.opacity(0.1))
                                                                      .frame(width: 330, height: 60, alignment: .center)
                                                                          .overlay(
@@ -351,7 +390,8 @@ struct AddStudent: View {
                                                .transition(.opacity)
                                        }
                             HStack {
-                                ZStack{                                                         Text("   \(savedDate ?? Date(), formatter: dateFormatter)")
+                                ZStack{
+                                    Text("\(savedDate ?? Date(), formatter: dateFormatter)")
                                                                                                                             .background(Color.gray.opacity(0.1))
                                                                                                                         .frame(width: 330, height: 60, alignment: .leading)
                                                                                                                             .overlay(
@@ -413,7 +453,9 @@ Button(action: {
                     
                   .frame(maxWidth: .infinity)
                   .padding(.top,10)
-                    
+                    .sheet(isPresented: $isShowPhotoLibrary) {
+                        ImagePicker(selectedImage: self.$image, sourceType: .photoLibrary)
+                    }
                       
                   
                   
@@ -423,7 +465,8 @@ Button(action: {
                                    .padding(.top,0)
                   .onAppear {
                           print("ContentView appeared!")
-                       
+                       DropDown()
+                    centreDropDown()
                       }
                 
           }
@@ -439,12 +482,12 @@ Button(action: {
     func addStudent(){
              
               let param : Parameters  = [
-                "name":"Raghuveer",
-                "gender":1,
-                "mobileNumber":"8500055580",
-                "email":"raghu85000@gmail.com",
+                "name":name,
+                "gender":value2Main,
+                "mobileNumber":mobileNumber,
+                "email":email,
                 "batchId":1,
-                "dateOfBirth":"5-20-1995"
+                "dateOfBirth":"\(savedDate ?? Date())"
               ]
                 
              let headers:HTTPHeaders = [
@@ -479,9 +522,200 @@ Button(action: {
                     }
           }
     
-  
-
+    func DropDown(){
+        let headers:HTTPHeaders = [
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json",
+    "version":"1.0.0",
+     "source":"app"
+     ]
+   
     
+        labels = [String]()
+        values = [Int]()
+     
+   let url2 = "https://staging.sreenidhi1sports.com/api/Options"
+
+    AF.request(url2, method: .get, parameters:nil ,encoding: URLEncoding(), headers: headers).validate().responseJSON { [self]
+              response in
+            
+              switch response.result {
+              case .success(let value):
+                  do {
+                  
+                    
+                     if  let data = value as? [[String:Any]] {
+                    
+                         for i in data {
+                             if let identifier = i["identifier"] as? String {
+                         
+                                 if identifier == "GENDER" {
+                             
+                             if let label = i["label"] as? String {
+                                 labels.append(label)
+                                 }
+                                     if let value = i["value"] as? Int {
+                                     values.append(value)
+                                                                                                       
+                                     }
+                                     
+                                
+                                     
+                             }
+                         
+                        
+                                 
+                               print(values)
+                           
+                                 
+                                let rr = labels.removeDuplicates()
+                                labels2 = rr
+                                 
+                                 let v1 = values.removeDuplicates()
+                                 values1 = v1
+                                 
+                               
+                                 
+                                 
+                                 
+                             }
+                           
+                          
+                             
+                         }
+                         
+                         
+                         
+                     }
+                     
+                     
+                     
+                  }
+                  break
+              case .failure(let error):
+                     
+                  print("failed response ",error)
+  //                print("sendLatLong Err", error.localizedDescription)
+                                
+              }
+          }
+      
+          
+        }
+    func centreDropDown(){
+        
+        let param:Parameters = [
+            "where":["isActive":1]
+        ]
+        let headers:HTTPHeaders = [
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json",
+    "version":"1.0.0",
+     "source":"app"
+     ]
+      
+        centreNames = [String]()
+        centreIDs = [Int]()
+   let url2 = "https://staging.sreenidhi1sports.com/api/Infrastructures?filter="
+
+    AF.request(url2, method: .get, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON { [self]
+              response in
+            
+              switch response.result {
+              case .success(let value):
+                  do {
+                  
+                    
+                     if  let data = value as? [[String:Any]] {
+                    
+                     
+                        for i in data {
+                            
+                          if  let isActive = i["isActive"] as? Int {
+                            if isActive == 1 {
+                                
+                                if let name = i["name"] as? String {
+                                centreNames.append(name)
+                                }
+                                if let id = i["id"] as? Int {
+                                    centreIDs.append(id)
+                                }
+                                print(i)
+                            }
+                            
+                            
+                                
+                            }
+                        }
+                         
+                         
+                     }
+                     
+                     
+                     
+                  }
+                  break
+              case .failure(let error):
+                     
+                  print("failed response ",error)
+  //                print("sendLatLong Err", error.localizedDescription)
+                                
+              }
+          }
+      
+          
+        }
+    func batchDropDown(id:Int){
+        batchNames = [String]()
+        let param:Parameters = [
+            "where":["isActive":1]
+        ]
+        let headers:HTTPHeaders = [
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json",
+    "version":"1.0.0",
+     "source":"app"
+     ]
+        
+       
+        
+   let url2 = "https://staging.sreenidhi1sports.com/api/Infrastructures/\(id)/batches"
+
+    AF.request(url2, method: .get, parameters:param ,encoding: URLEncoding(), headers: headers).validate().responseJSON { [self]
+              response in
+            
+              switch response.result {
+              case .success(let value):
+                  do {
+                  
+                    
+                     if  let data = value as? [[String:Any]] {
+                    
+                     
+                        for i in data {
+                            
+                            if  let batchNames1 = i["name"] as? String{
+                            batchNames.append(batchNames1)
+                            
+                            }
+                        }
+                         
+                     }
+                     
+                     
+                     
+                  }
+                  break
+              case .failure(let error):
+                     
+                  print("failed response ",error)
+  //                print("sendLatLong Err", error.localizedDescription)
+                                
+              }
+          }
+      
+          
+        }
 }
 
 struct AddStudent_Previews: PreviewProvider {
@@ -546,6 +780,57 @@ struct DatePickerWithButtons: View {
     
 }
 
+
+struct ImagePicker: UIViewControllerRepresentable {
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+ 
+    
+    @Binding var selectedImage: UIImage
+    @Environment(\.presentationMode) private var presentationMode
+    var sourceType: UIImagePickerController.SourceType = .photoLibrary
+ 
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = false
+        imagePicker.delegate = context.coordinator
+
+        imagePicker.sourceType = sourceType
+ 
+        return imagePicker
+    }
+ 
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
+ 
+    }
+    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+     
+        var parent: ImagePicker
+     
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+     
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+     
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                parent.selectedImage = image
+            }
+     
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+        
+        
+    
+        
+    }
+    
+    
+    
+}
 
 
 
