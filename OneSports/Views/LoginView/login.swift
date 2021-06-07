@@ -10,8 +10,8 @@ import Alamofire
 
 
 struct login: View {
-    @State var mail: String = ""
-    @State var password: String = ""
+    @State var mail: String = "Admin1@gmail.com"
+    @State var password: String = "Sree@123"
     @State var login1:Bool = false
     @State var tokenMain = ""
     var body: some View {

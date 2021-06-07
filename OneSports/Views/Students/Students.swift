@@ -10,6 +10,7 @@ import Alamofire
 
 struct Students: View {
     @State var menuOpen: Bool = false
+    @State var more: Bool = false
     @State var menuIndex = MenuContent()
     @State var index:Int = 0
     @State var searchText:String = ""
@@ -35,7 +36,8 @@ struct Students: View {
                           
                                                        }
             
-            
+            NavigationLink(destination: More() ,isActive: $more) {
+           }
             
             VStack{
                 
@@ -243,6 +245,9 @@ struct Students: View {
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: 25, height: 10, alignment: .center)
+                                                .onTapGesture {
+                                                    more = true
+                                                }
                                             Text("More")
                                             .font(.system(size:14))
                                             
@@ -321,8 +326,8 @@ struct Students: View {
          
            
         let headers:HTTPHeaders = [
-          
-           "version":"1.0.0",
+            "version":"1.0.0",
+             "source":"app"
                ]
         let url1 = "https://staging.sreenidhi1sports.com/api/Accounts?filter="
          
@@ -334,7 +339,7 @@ struct Students: View {
                    case .success(let value):
                        do {
                         if  let data = value as? [[String:Any]] {
-                           print(data)
+                           print("huhuu",data)
                         for i in data {
                             if  let name1 = i["name"] as? String {
                            
@@ -346,11 +351,7 @@ struct Students: View {
                         }
                            
                         }
-                        
-                         
-                           
-                         
-                          
+
                        }
                        break
                    case .failure(let error):

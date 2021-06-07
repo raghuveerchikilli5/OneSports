@@ -12,8 +12,10 @@ import UIKit
 struct AddStudent: View {
     
     //  Declaring  Variables
-    
+    @State var shouldHide = false
     @State private var isShowPhotoLibrary = false
+    @State private var photo = false
+    @State private var camera = false
     @State private var image = UIImage()
     @State var showDatePicker: Bool = false
        @State var savedDate: Date? = nil
@@ -83,12 +85,12 @@ struct AddStudent: View {
         
         NavigationView {
             
+            ZStack {
             ScrollView(.vertical) {
                     
                    
                
             
-                  ZStack {
                     NavigationLink(destination: Students() ,isActive: $back) {
                                                                                                               }
                        
@@ -127,7 +129,10 @@ struct AddStudent: View {
                             .cornerRadius(10)
                                 .padding(.top,40)
                     Button(action: {
-                                       self.isShowPhotoLibrary = true
+                                      
+                        shouldHide = false
+                        
+                        
                                    }) {
                                      
                                            
@@ -453,21 +458,79 @@ Button(action: {
                     
                   .frame(maxWidth: .infinity)
                   .padding(.top,10)
-                    .sheet(isPresented: $isShowPhotoLibrary) {
-                        ImagePicker(selectedImage: self.$image, sourceType: .photoLibrary)
+                  .sheet(isPresented: $isShowPhotoLibrary) {
+                    if camera == true {
+                        ImagePicker(selectedImage: self.$image, sourceType: .camera)
                     }
+                    else if photo == true {
+                        ImagePicker(selectedImage: self.$image, sourceType: .photoLibrary)
+                        
+                    }
+                    
                       
-                  
+                    }
+                   
+                   
                   
           }.navigationBarTitle("")
           .navigationBarHidden(true)
                   .frame(maxWidth: .infinity)
                                    .padding(.top,0)
                   .onAppear {
+                    shouldHide = true
                           print("ContentView appeared!")
                        DropDown()
                     centreDropDown()
                       }
+                VStack(spacing:10){
+                                       Spacer()
+                    
+                    if !self.$shouldHide.wrappedValue {
+                                   Button(action: {
+                                    shouldHide = true
+                                           photo = true
+                                         camera = false
+                                                   self.isShowPhotoLibrary = true
+                                               }) {
+                                                   HStack {
+                                                       Image(systemName: "photo")
+                                                           .font(.system(size: 20))
+                                    
+                                                       Text("Photo library")
+                                                           .font(.headline)
+                                                   }
+                                                   .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                                                   .background(Color.blue)
+                                                   .foregroundColor(.white)
+                                                   .cornerRadius(20)
+                                                   .padding(.horizontal)
+                                               }
+                                   Button(action: {
+                                    shouldHide = true
+                                    camera = true
+                                  photo = false
+                                                                      self.isShowPhotoLibrary = true
+                                                                  }) {
+                                                                      HStack {
+                                                                          Image(systemName: "camera")
+                                                                              .font(.system(size: 20))
+                                                       
+                                                                          Text("Camera")
+                                                                              .font(.headline)
+                                                                      }
+                                                                      .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                                                                      .background(Color.blue)
+                                                                      .foregroundColor(.white)
+                                                                      .cornerRadius(20)
+                                                                      .padding(.horizontal)
+                                                                  }
+                        
+                    }
+                        
+                                   
+                                   }.padding(.bottom,0)
+                
+                
                 
           }
                
@@ -822,10 +885,6 @@ struct ImagePicker: UIViewControllerRepresentable {
      
             parent.presentationMode.wrappedValue.dismiss()
         }
-        
-        
-    
-        
     }
     
     
