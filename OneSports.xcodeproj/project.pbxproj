@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180D9E3A266E48D3007C208B /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D9E39266E48D3007C208B /* More.swift */; };
-		180D9E42266E4972007C208B /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D9E41266E4972007C208B /* Students.swift */; };
-		180D9E47266E49DE007C208B /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D9E46266E49DE007C208B /* AddStudent.swift */; };
 		1812BF6626410FFC00F8CF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6526410FFC00F8CF49 /* AppDelegate.swift */; };
 		1812BF6826410FFC00F8CF49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6726410FFC00F8CF49 /* SceneDelegate.swift */; };
 		1812BF6A26410FFC00F8CF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF6926410FFC00F8CF49 /* ContentView.swift */; };
@@ -20,6 +17,7 @@
 		1812BFA0264113E400F8CF49 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9D264113E400F8CF49 /* CreateAccountViewController.swift */; };
 		1812BFA1264113E400F8CF49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9E264113E400F8CF49 /* LoginViewController.swift */; };
 		1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BF9F264113E400F8CF49 /* ViewController.swift */; };
+		1886D965266E32C900FD2AC4 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886D964266E32C900FD2AC4 /* More.swift */; };
 		188C3755265E33A1007CCCB5 /* VerifyOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C3754265E33A1007CCCB5 /* VerifyOTP.swift */; };
 		18939590265D018A0003E6D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893958F265D01890003E6D0 /* LoginViewModel.swift */; };
 		18A1366F264AB568004A59B6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1366D264AB568004A59B6 /* login.swift */; };
@@ -30,7 +28,9 @@
 		18A13780265E8DA4004A59B6 /* OneSports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A1377C265E8DA4004A59B6 /* OneSports.xcdatamodeld */; };
 		18A1380A2660BA96004A59B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A138082660BA96004A59B6 /* LaunchScreen.storyboard */; };
 		18B0511026611688002C6106 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0510F26611688002C6106 /* Dashboard.swift */; };
+		18B0513326665879002C6106 /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0513226665879002C6106 /* Students.swift */; };
 		18B052132667AFDB002C6106 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B052122667AFDB002C6106 /* SearchBar.swift */; };
+		18B052192668DE0A002C6106 /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B052182668DE0A002C6106 /* AddStudent.swift */; };
 		5E5A2B3E5C1BB359D31D333C /* Pods_OneSportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D81DE0C768DDDA750168EE /* Pods_OneSportsTests.framework */; };
 		81F0317BF7A3A397EC70E11F /* Pods_OneSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BDE0B3C2243E214805CB51 /* Pods_OneSports.framework */; };
 		CEC7B0136DF07F5E7E4D6C95 /* Pods_OneSports_OneSportsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0762FDDAAA9259F60B6EB3B /* Pods_OneSports_OneSportsUITests.framework */; };
@@ -54,9 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		180D9E39266E48D3007C208B /* More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
-		180D9E41266E4972007C208B /* Students.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Students.swift; path = Students/Students.swift; sourceTree = "<group>"; };
-		180D9E46266E49DE007C208B /* AddStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudent.swift; sourceTree = "<group>"; };
 		1812BF6226410FFC00F8CF49 /* OneSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1812BF6526410FFC00F8CF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1812BF6726410FFC00F8CF49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +69,7 @@
 		1812BF9D264113E400F8CF49 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		1812BF9E264113E400F8CF49 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1812BF9F264113E400F8CF49 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1886D964266E32C900FD2AC4 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		188C3754265E33A1007CCCB5 /* VerifyOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTP.swift; sourceTree = "<group>"; };
 		1893958F265D01890003E6D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		18A1366D264AB568004A59B6 /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
@@ -83,8 +81,10 @@
 		18A1377D265E8DA4004A59B6 /* OneSports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneSports.xcdatamodel; sourceTree = "<group>"; };
 		18A138092660BA96004A59B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B0510F26611688002C6106 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		18B0513226665879002C6106 /* Students.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
 		18B0520526666088002C6106 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B052122667AFDB002C6106 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		18B052182668DE0A002C6106 /* AddStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudent.swift; sourceTree = "<group>"; };
 		31371A4E79C5538C85EEF74D /* Pods-OneSports-OneSportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports-OneSportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneSports-OneSportsUITests/Pods-OneSports-OneSportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4457EAC08A2511951BA165F2 /* Pods-OneSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSports.debug.xcconfig"; path = "Target Support Files/Pods-OneSports/Pods-OneSports.debug.xcconfig"; sourceTree = "<group>"; };
 		61A9F64CBE63745A575AF697 /* Pods-OneSportsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSportsTests.release.xcconfig"; path = "Target Support Files/Pods-OneSportsTests/Pods-OneSportsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,14 +124,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		180D9E33266E4811007C208B /* MoreAboutStudent */ = {
-			isa = PBXGroup;
-			children = (
-				180D9E39266E48D3007C208B /* More.swift */,
-			);
-			path = MoreAboutStudent;
-			sourceTree = "<group>";
-		};
 		1812BF5926410FFC00F8CF49 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +193,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1886D963266E32AB00FD2AC4 /* MoreAboutStudent */ = {
+			isa = PBXGroup;
+			children = (
+				1886D964266E32C900FD2AC4 /* More.swift */,
+			);
+			path = MoreAboutStudent;
+			sourceTree = "<group>";
+		};
 		18A13682264EBEF4004A59B6 /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				18B0513126665850002C6106 /* Students */,
-				180D9E41266E4972007C208B /* Students.swift */,
 				18B051052660BEAC002C6106 /* DashBoard */,
 				18B051032660BE56002C6106 /* ForgotOTP */,
 				18B051022660BE42002C6106 /* RegisterViews */,
@@ -317,9 +316,10 @@
 		18B0513126665850002C6106 /* Students */ = {
 			isa = PBXGroup;
 			children = (
-				180D9E33266E4811007C208B /* MoreAboutStudent */,
+				1886D963266E32AB00FD2AC4 /* MoreAboutStudent */,
 				18B052172668DD4B002C6106 /* AddStudent */,
 				18B052112667AF8F002C6106 /* SearchBar */,
+				18B0513226665879002C6106 /* Students.swift */,
 			);
 			path = Students;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 		18B052172668DD4B002C6106 /* AddStudent */ = {
 			isa = PBXGroup;
 			children = (
-				180D9E46266E49DE007C208B /* AddStudent.swift */,
+				18B052182668DE0A002C6106 /* AddStudent.swift */,
 			);
 			path = AddStudent;
 			sourceTree = "<group>";
@@ -647,20 +647,20 @@
 			files = (
 				18A136922652BFF1004A59B6 /* ResetPassword.swift in Sources */,
 				1812BFA1264113E400F8CF49 /* LoginViewController.swift in Sources */,
+				18B052192668DE0A002C6106 /* AddStudent.swift in Sources */,
 				188C3755265E33A1007CCCB5 /* VerifyOTP.swift in Sources */,
 				1812BFA0264113E400F8CF49 /* CreateAccountViewController.swift in Sources */,
 				1812BF6626410FFC00F8CF49 /* AppDelegate.swift in Sources */,
-				180D9E47266E49DE007C208B /* AddStudent.swift in Sources */,
 				18B052132667AFDB002C6106 /* SearchBar.swift in Sources */,
 				18A1366F264AB568004A59B6 /* login.swift in Sources */,
 				18A136912652BFF1004A59B6 /* ForgotUI.swift in Sources */,
 				1812BF6826410FFC00F8CF49 /* SceneDelegate.swift in Sources */,
-				180D9E3A266E48D3007C208B /* More.swift in Sources */,
+				1886D965266E32C900FD2AC4 /* More.swift in Sources */,
 				18939590265D018A0003E6D0 /* LoginViewModel.swift in Sources */,
 				18A13674264C0390004A59B6 /* SignUpView.swift in Sources */,
 				1812BFA2264113E400F8CF49 /* ViewController.swift in Sources */,
 				1812BF6A26410FFC00F8CF49 /* ContentView.swift in Sources */,
-				180D9E42266E4972007C208B /* Students.swift in Sources */,
+				18B0513326665879002C6106 /* Students.swift in Sources */,
 				18B0511026611688002C6106 /* Dashboard.swift in Sources */,
 				18A13780265E8DA4004A59B6 /* OneSports.xcdatamodeld in Sources */,
 			);
